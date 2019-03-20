@@ -5,10 +5,7 @@ require 'json'
 
 require 'net/http'
 URL=("https://player.vimeo.com/api/player.js")
-#url = "https://player.vimeo.com/api/player.js"
-#uri = URI(url)
-#response = Net::HTTP.get(uri)
-#JSON.parse(response)
+
 
 
 class Video
@@ -18,13 +15,12 @@ class Video
       @video_id = video_id # "https://player.vimeo.com/<%=@video_id%>"
       @player = player
    end
-   #Embed a video url
-   #convert video url link to video mp4
    def get_video
        begin
          fetcher = Vimeo::Fetcher.new
          #search for the url of the the video
          player = fetcher.search(@video_url)
+         
          @player = video_url.player
        rescue
          @player = ["Sorry,the embeded code for this video is not valid!"]
