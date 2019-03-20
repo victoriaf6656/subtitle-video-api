@@ -15,6 +15,9 @@ class Video
       @video_id = video_id # "https://player.vimeo.com/<%=@video_id%>"
       @player = player
    end
+   def video(video_id)
+      render :partial => 'video_video', :locals => { :video_id => video_id }
+   end
    def get_video
        begin
          fetcher = Vimeo::Fetcher.new
