@@ -11,8 +11,11 @@ class ApplicationController < Sinatra::Base
     
   end
   post '/result' do
+    @user_id = params[:video_id]
+    @user_url = params[:video_url]
+    @user_player = params[:player]
+    @user_player = Video.new(@video_url)
+    @user_player.get_video
     erb :result
-    #@user_video_id = params[:video_id]
-    #@user_player = params[:player]
   end
 end

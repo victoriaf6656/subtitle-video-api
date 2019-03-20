@@ -1,7 +1,7 @@
 .video-wrapper {
     background-color:lightblue;
-    width:500px;
-    height:500px;
+    width:650px;
+    height:650px;
     padding:50px;
     margin:50px;
 }
@@ -31,4 +31,10 @@ col-sm-6 {
     margin: auto;
     width: 50%;
     position: absolute;
+    background-image: linear-gradient(to bottom right, Slateblue,white);
+}
+iframe {
+    width:"640";
+    height:"360";
+    
 }
